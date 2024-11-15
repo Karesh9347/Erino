@@ -1,52 +1,57 @@
-import React from 'react';
-import { Box, Typography, Button, useTheme } from '@mui/material';
+import React, { useState } from 'react';
+import { Navbar, Nav, Button, Offcanvas, Container, NavDropdown, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-import Navb from './Nav';
+function Navb() {
+  const [show, setShow] = useState(false);
 
-const Home = () => {
-  const theme = useTheme(); 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
-    <div>
-      <Navb/>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          minHeight: '100vh', 
-          marginTop:"-80px",
-          textAlign: 'center',
-          backgroundImage: `linear-gradient(45deg, ${theme.palette.primary.main}, #ffffff)`, 
-        }}
-      >
-        <Typography variant="h3" sx={{ fontWeight: 'bolder', fontFamily:"times-new-roman",fontPalette:"dark" }}>
-          Sell More. Pay Less. <br /> Grow Fast 🚀
-        </Typography>
-        <Typography variant="h5" gutterBottom style={{ padding: '0 10%',fontFamily:"serif" }}>
-          Erino CRM: Sales, service, and journey building tools to 2X your growth.
-          <br />
-           Start in less than 5 minutes and see instant results.
-        </Typography>
-        <Button
-          variant="h6"
-          sx={{
-            color: 'white',
-            fontWeight: 'bold',
-            backgroundColor: "ActiveBorder", 
-            borderRadius: '10px',
-            padding: '15px',
-            fontSize: [theme.typography.fontSize.h6, theme.typography.fontSize.h4], 
-            
-          }}
-          href="https://erino.io/contact/"
-        >
-          Try Erino for Free {'>'}
-        </Button>
-      </Box>
-    </div>
-  );
-};
+    <>
+      <Navbar expand="lg" sticky="top" className="bg-body-tertiary mb-1  g-2">
+        <Container fluid>
+          <Navbar.Brand as={Link} to="/">
+          <img src='https://erino.io/wp-content/uploads/2024/07/Final-Logo.svg' alt='logo' width={120} height={120} style={{margin:"-50px 0"}}/>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow}>
+           
+          </Navbar.Toggle>
 
-export default Home;
+          <Navbar.Offcanvas
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+            placement="end"
+            show={show}
+            onHide={handleClose}
+          >
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title id="offcanvasNavbarLabel">
+              <img src='https://erino.io/wp-content/uploads/2024/07/Final-Logo.svg' alt='logo' width={120} height={120} style={{margin:"-30px 0"}}/>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+
+            <Offcanvas.Body>
+              <Nav className="justify-content-end flex-grow-1 pe-6 g-2">
+                <Nav.Link as={Link} to="/add-contact" style={{fontWeight:"bold",fontSize:"20px",fontStyle:"oblique",marginRight:"30px"}}>Add Contact</Nav.Link>
+                <Nav.Link as={Link} to="/remove-contact" style={{fontWeight:"bold",fontSize:"20px",fontStyle:"oblique",marginRight:"30px"}}>Remove Contact</Nav.Link>
+                <Nav.Link as={Link} to="/update-contact" style={{fontWeight:"bold",fontSize:"20px",fontStyle:"oblique",marginRight:"30px"}}>Update Contact</Nav.Link>
+                <Nav.Link as={Link} to="/all-contacts" style={{fontWeight:"bold",fontSize:"20px",fontStyle:"oblique",marginRight:"30px"}}>All Contacts</Nav.Link>
+               
+              </Nav>
+              
+              <Nav>
+                <Button href='https://erino.io/contact/' style={{fontWeight:"bold",fontSize:"20px",fontStyle:"oblique"}}>Try Erino Free</Button>
+              </Nav>
+
+            
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
+    </>
+  );
+}
+
+export default Navb;
