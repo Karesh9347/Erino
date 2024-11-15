@@ -13,7 +13,7 @@ const RemoveContact = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try{
-        const response=await axios.delete(`http://localhost:5000/remove-contact/${email}`)
+        const response=await axios.delete(`https://erino-backend-1.onrender.com/remove-contact/${email}`)
         alert(response.data.message)
     }catch(err){
         alert(err.response.data.message)
