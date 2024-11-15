@@ -24,7 +24,7 @@ const AddContact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/add-contact", formValues);
+      const response = await axios.post("https://erino-backend-1.onrender.com/add-contact", formValues);
       setSuccessMessage(response.data.message);
       setErrorMessage('');
       setFormValues({
