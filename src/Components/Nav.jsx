@@ -13,7 +13,7 @@ function Navb() {
       <Navbar expand="lg" sticky="top" className="bg-body-tertiary mb-1">
         <Container fluid>
           <Navbar.Brand as={Link} to="/">
-          <img src='https://erino.io/wp-content/uploads/2024/07/Final-Logo.svg' alt='logo' width={120} height={120} style={{margin:"-20px 0"}}/>
+          <img src='https://erino.io/wp-content/uploads/2024/07/Final-Logo.svg' alt='logo' width={120} height={120} style={{margin:"-50px 0"}}/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow}>
            
