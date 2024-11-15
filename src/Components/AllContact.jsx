@@ -20,7 +20,7 @@ const AllContact = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/all-contacts");
+        const response = await axios.get("https://erino-backend-1.onrender.com/all-contacts");
         setContacts(response.data);
       } catch (err) {
         console.error('Error fetching contacts:', err);
