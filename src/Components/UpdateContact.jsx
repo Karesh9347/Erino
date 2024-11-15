@@ -30,7 +30,7 @@ const UpdateContact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:5000/update-helper/${email}`);
+      const response = await axios.get(`https://erino-backend-1.onrender.com/update-helper/${email}`);
       if (response.data) {
         setFormData(response.data);
         setIsFormEditable(true);  
@@ -47,7 +47,7 @@ const UpdateContact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/update-contact/${formData._id}`, formData);
+      await axios.put(`https://erino-backend-1.onrender.com/update-contact/${formData._id}`, formData);
       alert('Contact updated successfully');
       setFormData({
         email: '',
