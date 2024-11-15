@@ -14,6 +14,8 @@ This project is a **Contact Management Application** built using **React** and *
 - **React Bootstrap**: Bootstrap components for React, providing a responsive UI framework.
 - **React Router**: For navigation between different views (Add Contact, Remove Contact, etc.).
 - **CSS**: Custom styling for the app.
+-  **Material UI**: styling for the app.
+ - **Express**: for performing the crud opeartions like add ,remove,delete,all contact.
 
 ### Setup and Installation:
 
@@ -24,7 +26,7 @@ This project is a **Contact Management Application** built using **React** and *
 
 2. Navigate into the project directory:
     ```bash
-    cd contact-management-app
+    cd Erino
     ```
 
 3. Install the dependencies:
