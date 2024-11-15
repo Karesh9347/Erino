@@ -22,10 +22,10 @@ const Home = () => {
         }}
       >
         <Typography variant="h3" sx={{ fontWeight: 'bolder', fontFamily: 'sans-serif' }}>
-          Sell More. Pay Less. <br /> Grow Fast 
+          Sell More. Pay Less. <br /> Grow Fast 🚀
         </Typography>
         <Typography variant="h5" gutterBottom style={{ padding: '0 10%' }}>
-          Erino CRM: Sales, service, and journey building tools to 2X your growth.🚀
+          Erino CRM: Sales, service, and journey building tools to 2X your growth.
           <br />
            Start in less than 5 minutes and see instant results.
         </Typography>
