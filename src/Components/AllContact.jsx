@@ -33,7 +33,7 @@ const AllContact = () => {
 
   const deleteAccount = async (email) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/remove-contact/${email}`);
+      const response = await axios.delete(`https://erino-backend-1.onrender.com/remove-contact/${email}`);
       alert(response.data.message);
       setContacts(contacts.filter(contact => contact.email !== email));  // Remove the deleted contact from the state
     } catch (err) {
