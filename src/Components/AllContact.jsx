@@ -93,7 +93,7 @@ const AllContact = () => {
             <InputLabel>Sort By</InputLabel>
             <Select value={filter} onChange={handleFilterChange}>
               <MenuItem value="recent">Recent</MenuItem>
-              <MenuItem value="firstName">First Name</MenuItem>
+              <MenuItem value="firstName">sort</MenuItem>
             </Select>
           </FormControl>
         </Box>
